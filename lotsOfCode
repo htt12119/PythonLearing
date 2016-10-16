@@ -103,3 +103,9 @@ while (go=='y'):
     print go
 else:
     print 'Goodbye!'
+#coding:utf-8
+L=['Bart','Lisa','Adam']
+n = 0
+while n < 3:
+    print 'Hello,%s!'%(L[n])
+    n+=1
