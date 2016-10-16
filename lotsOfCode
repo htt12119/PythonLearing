@@ -77,3 +77,29 @@ while i<=5:
         continue
     print 'i=%d,sum=%d'%(i,sumA)    
  
+#Filename:guessnum3.py
+#程序随机产生一个0~300间的整数，玩家竞猜，
+# 允许玩家自己控制游戏,如果猜中系统给出提示
+# 并退出程序，如果猜错给出“太大了”或“太小
+#了”的提示，如果不想继续玩可以退出
+
+
+
+from random import randint
+x=randint(0,300)
+go='y'
+while (go=='y'):
+    print 'Please inpput a number between 0~300:'
+    digit=input()
+    if digit == x:
+       print  'Bingo!'
+       break
+    elif digit>x:
+        print 'Too large,please try again.'
+    else:
+        print 'Too small,please try again.'
+    print 'if you do not want to continue,input n,or input y.'
+    go=raw_input()
+    print go
+else:
+    print 'Goodbye!'
