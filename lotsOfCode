@@ -24,3 +24,12 @@ for count in range(0,5):
         print 'Too large,please try again.'
     else:
         print 'Too small,please try again.'
+#Filename:breakpro.py
+sumA=0
+i=1
+while True:
+    sumA+=i
+    i+=1
+    if sumA>10:
+        break
+print  'i=%d,sum=%d'%(i,sumA)
