@@ -58,3 +58,22 @@ for i in range(2,101):
     if(flag):
         print i,
 #加了逗号以后就是一行输出没如果不加就是一个数字一行
+#Filename:breakpro.py
+sumA=0
+i=1
+while i<=5:
+    sumA+=i
+    if i == 3:
+        break
+    print 'i=%d,sum=%d'%(i,sumA)
+    i+=1
+#Filename:continuepro.py
+sumA=0
+i = 1
+while i<=5:
+    sumA+=i
+    i+=1
+    if i==3:
+        continue
+    print 'i=%d,sum=%d'%(i,sumA)    
+ 
