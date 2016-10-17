@@ -32,7 +32,7 @@ def f(x=True):
 f()
 f(False)
 #coding:utf-8
-#默认参数的值可以改变
+#默认参数的值可以改变,默认参数一般放在参数列表的最后
 def f(x,y=True):
     '''x and y both correct words or not'''
     if y:
