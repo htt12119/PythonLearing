@@ -64,3 +64,12 @@ print my_add(3,5)
 
 my_add = lambda x,y:x+y
 print my_add(3,5)
+#the nth Fibonacci number
+def fib(n):
+    a,b=0,1
+    count=1
+    while count<n:
+        a,b=b,a+b
+        count=count+1
+    print a
+fib(10)
