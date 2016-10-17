@@ -91,3 +91,16 @@ def hanoi(a,b,c,n):
         hanoi(b,a,c,n-1)
 
 hanoi('a','b','c',4)
+#Filename:global.py
+global_str='hello'
+def foo():
+    local_str='world'
+    return  global_str+local_str
+print foo()
+
+#Filename:samename.py
+a=3
+def f():
+    a=5
+    print a**2
+f()
