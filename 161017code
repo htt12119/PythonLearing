@@ -129,3 +129,8 @@ for line in f.readlines():
 f=open('e:/hellopython/flow.jpg','rb')
 f.read()
 #我直接执行就不行，如果用命令行，天啊，有好多好多行
+#coding:utf-8
+#中文需要解码
+f=open('e:/hellopython/hel.txt','rb')
+u=f.read().decode('gbk')
+print u
