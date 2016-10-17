@@ -40,3 +40,10 @@ def f(x,y=True):
     print x,'is OK'
 f(68)
 f(68,False)
+#coding:utf-8
+#函数可以像阐述一样传递给另外一个函数
+def addMe2Me(x):
+        return (x+x)
+def self(f,y):
+    print f(y)
+self(addMe2Me,2.2)
