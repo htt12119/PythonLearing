@@ -125,3 +125,7 @@ with open('e:/hellopython/helloworld.txt','r') as f:
 
 for line in f.readlines():
     print(line.strip())#把末尾的‘\n’删掉
+#coding:utf-8
+f=open('e:/hellopython/flow.jpg','rb')
+f.read()
+#我直接执行就不行，如果用命令行，天啊，有好多好多行
