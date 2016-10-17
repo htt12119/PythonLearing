@@ -5,3 +5,19 @@ def addMe2Me(x):
 print addMe2Me(3.7)
 print addMe2Me(5)
 print addMe2Me('Python')
+#coding:utf-8
+# 输出1-100之间的素数
+from math import sqrt
+def isPrime(x):
+    if x==1:
+        return False
+    k = int(sqrt(x))
+    for j in range(2,k+1):
+        if x%j==0:
+            return False
+        return True
+if __name__ == '__main__':
+    for i in range(2,101):
+      if isPrime(i):
+          print i,
+#不加那个utf-8那行就不能执行，就算中文在注释里也不行
