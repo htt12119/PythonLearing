@@ -73,3 +73,11 @@ def fib(n):
         count=count+1
     print a
 fib(10)
+#the nth Fibonacci number
+def fib(n):
+    if n==0 or n==1:
+        return  n
+    else:
+        return  (fib(n-1)+fib(n-2))
+
+print fib(9)
