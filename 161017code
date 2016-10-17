@@ -113,3 +113,15 @@ def f(x):
 a=3
 f(8)
 print a
+try:
+    f = open('e:/hellopython/helloworld.txt', 'r')
+    print f.read()
+finally:
+    if f:
+        f.close()
+
+with open('e:/hellopython/helloworld.txt','r') as f:
+    print f.read()
+
+for line in f.readlines():
+    print(line.strip())#把末尾的‘\n’删掉
