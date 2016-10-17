@@ -21,3 +21,22 @@ if __name__ == '__main__':
       if isPrime(i):
           print i,
 #不加那个utf-8那行就不能执行，就算中文在注释里也不行
+#coding:utf-8
+#函数的参数可以有一个默认值，如果有提供默认值，在函数
+# 定义中，默认参数以赋值语句的形式提供
+def f(x=True):
+      '''whether x is a correct word or not'''
+      if x:
+          print 'x is a correct word'
+      print 'ok'
+f()
+f(False)
+#coding:utf-8
+#默认参数的值可以改变
+def f(x,y=True):
+    '''x and y both correct words or not'''
+    if y:
+        print x,'and y both correct'
+    print x,'is OK'
+f(68)
+f(68,False)
