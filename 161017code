@@ -104,3 +104,12 @@ def f():
     a=5
     print a**2
 f()
+#Filename:scopeofvar.py
+def f(x):
+    global a
+    print a
+    a=5
+    print a+x
+a=3
+f(8)
+print a
