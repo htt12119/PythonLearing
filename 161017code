@@ -134,3 +134,7 @@ f.read()
 f=open('e:/hellopython/hel.txt','rb')
 u=f.read().decode('gbk')
 print u
+#读文件时直接转换代码
+import codecs
+with codecs.open('e:/hellopython/hel.txt','r','gbk') as f:
+    f.read() #u '\u6d4b\u8bd5'
