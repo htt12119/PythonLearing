@@ -47,3 +47,20 @@ def addMe2Me(x):
 def self(f,y):
     print f(y)
 self(addMe2Me,2.2)
+def addMe2Me(x):
+    'apply operation + to argument'
+    return (x+x)
+print addMe2Me(5)
+#coding:utf-8
+# 匿名函数
+r = lambda x:x+x
+print r(5)
+
+def my_add(x,y):return x+y
+print r(5)
+
+def my_add(x,y):return  x+y
+print my_add(3,5)
+
+my_add = lambda x,y:x+y
+print my_add(3,5)
