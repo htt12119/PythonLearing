@@ -138,3 +138,5 @@ print u
 import codecs
 with codecs.open('e:/hellopython/hel.txt','r','gbk') as f:
     f.read() #u '\u6d4b\u8bd5'
+with open('e:/hellopython/hel.txt','w') as f:
+    f.write('hello.world')
