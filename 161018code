@@ -8,7 +8,13 @@ while n<=99:
 print L
 #在Python中如果想看列表，可以直接就输入print 列表名
 
-
+#coding:utf-8
+#读文件直到文件结束，返回一个字符串
+f1=open('e:/hellopython/hel.txt','r')
+p1=f1.read(5)
+p2=f1.read()
+print p1
+print p2
 
 
 
