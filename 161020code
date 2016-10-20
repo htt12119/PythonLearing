@@ -39,3 +39,18 @@ r = urllib.urlopen('http://www.baidu.com')
 html = r.read()
 print html
 #打开了百度首页
+
+#这个可能他们网站又变了，所以输出的是nomatch
+#Filename:dji.py
+import  urllib2
+import  re
+dStr=urllib2.urlopen('http://finance.yahoo.com/q/cp?s=%5EDJI+Components').read()
+m = re.findall('<tr><td class="yfnc_tabledata1"><b><a href=".*?">(.*?)'
+               '</a></b></td><td class="yfnc_tabledata1">(.*?)</td>/*?<b>(.*?)</b>.*?</tr>',dStr)
+if m:
+    print m
+    print '\n'
+    print len(m)
+else:
+    print 'not match'
+ 
