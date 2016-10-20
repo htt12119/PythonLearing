@@ -24,3 +24,10 @@ print cNames
 f.close()
 
 
+#coding:utf-8
+#当程序启动以后，以下三种标准文件有效：
+#stdin 标准输入
+#stdout 标准输出
+#stderr 标准错误
+newcName = raw_input('Enter the name of new company:')
+print newcName
