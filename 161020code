@@ -31,3 +31,11 @@ f.close()
 #stderr 标准错误
 newcName = raw_input('Enter the name of new company:')
 print newcName
+
+#coding:utf-8
+#urllib：抓取网页，解析网页内容
+import urllib
+r = urllib.urlopen('http://www.baidu.com')
+html = r.read()
+print html
+#打开了百度首页
