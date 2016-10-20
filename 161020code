@@ -54,3 +54,12 @@ if m:
 else:
     print 'not match'
  
+ #Filename:quptes.py，这个得安装，我没安装所以不能用
+from matplotlib.finance import quotes_historical_yahoo
+from datetime import  date
+import pandas as pd
+today=date.today()
+start=(today.y -1,today.month,today.day)
+quotes=quotes_historical_yahoo('AXP',start,today)
+df = pd.DataFrame(quotes)
+print df
