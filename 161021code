@@ -149,3 +149,20 @@ def log(text):
             return func(*args,**kw)
         return wrapper
     return decorator
+
+#请编写一个decorator，能在函数调用的前后打印出‘begin call’和‘end call’的日志。
+import  functools
+def log(func):
+    @functools.wraps(func)
+    def wrape(*args,**kw):
+        print('begin call')
+        execute=func(*args,**kw)
+        print ('end call')
+        return execute
+
+    return wrape
+
+@log
+def now():
+    print('2016-02-13')
+now()
