@@ -60,3 +60,26 @@ print f()
 f1=lazy_sum(1,3,5,7,9)
 f2=lazy_sum(1,3,5,7,9)
 print f1==f2
+
+#coding:utf-8
+def count():
+    fs=[]
+    for i in range(1,4):
+        def f():
+            return  i*i
+        fs.append(f)
+    return fs
+f1,f2,f3=count()
+print f1(),f2(),f3()
+
+def count1():
+    fs=[]
+    for i in range(1,4):
+        def f(j):
+            def g():
+                return  j*j
+            return  g
+        fs.append(f(i))
+    return fs
+f4,f5,f6=count1()
+print f4(),f5(),f6()
