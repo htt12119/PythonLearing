@@ -83,3 +83,20 @@ def count1():
     return fs
 f4,f5,f6=count1()
 print f4(),f5(),f6()
+
+#coding:utf-8
+print map(lambda x:x*x,[1,2,3,4,5,6,7,8,9])
+
+#以上就等价于
+def f(x):
+     return x*x
+#匿名函数
+f=lambda x:x*x
+print f(5)
+def build(x,y):
+    return lambda:x*x+y*y
+f=build(1,4)
+#这是输出函数
+print f
+#这是调用函数
+print f()
