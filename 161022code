@@ -102,3 +102,44 @@ bart.print_score()
 lisa.print_score()
 print bart.get_grade()
 
+#-*- coding:utf-8 -*-
+#修改之后的第三遍
+#和普通的函数相比，在类中定义的函数只有一点不同，就是第一个参数永远是实例变量
+# self，并且，调用时，不用传递该参数。
+class Student(object):
+
+    def __init__(self,name,score):
+        self.name = name;
+        self.score = score
+    def print_score(self):
+        print '%s:%s' % (self.__name,self.__score)
+    def get_grade(self):
+        if self.score>=90:
+            return 'A'
+        elif self.score>=60:
+            return 'B'
+        else:
+            return  'C'
+    def get_name(self):
+        return self.__new
+    def get_score(self):
+        return self.__score
+    def set_score(self,score):
+        if 0<=score<=100:
+            self.__score=score
+        else:
+            raise ValueError('bad score')
+
+    def set_name(self, name):
+            self.__name=name
+
+bart=Student('',59)
+lisa=Student('Lisa Simpson',87)
+print 'nihao',bart
+#print Student
+bart.set_name('Bart Simpson')
+#print bart.name
+#bart.print_score()
+#lisa.print_score()
+print bart.get_grade()
+print 'helloa!',bart._Student__name
