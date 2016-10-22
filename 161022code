@@ -18,3 +18,21 @@ def test():
 
 if __name__=='__main__':
     test()
+
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
+try:
+    import  cStringIO as StringIO
+except ImportError:#导入失败会捕获到ImportError
+    import StringIO
+#这样可以优先导入cStringIO
+
+#类似simplejson这样的库，在python2.6之前是独立的第三
+# 方库，从2.6开始内置，所以，会有这样的写法
+try:
+    import json #python>=2.6
+except ImportError:
+    import  simplejson as json #python <= 2.5
+#python是动态语言，函数签名一致接口就一样，因此，无论
+#无论导入哪个模块后续代码都能正常工作。
