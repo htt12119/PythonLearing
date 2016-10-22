@@ -56,3 +56,20 @@ def greeting(name):
 # 的代码封装和抽象的方法，即：
 #外部不需要引用的函数全部定义成private，只有外部
 #需要引用的函数才定义为public
+
+#-*- coding:utf-8 -*-
+class Student(object):
+
+    def __init__(self,name,score):
+        self.name = name;
+        self.score = score
+    def print_score(self):
+        print '%s:%s' % (self.name,self.score)
+
+bart=Student('Bart Simpson',59)
+lisa=Student('Lisa Simpson',87)
+
+bart.print_score()
+lisa.print_score()
+
+
