@@ -72,4 +72,33 @@ lisa=Student('Lisa Simpson',87)
 bart.print_score()
 lisa.print_score()
 
+#-*- coding:utf-8 -*-
+#修改过的
+#和普通的函数相比，在类中定义的函数只有一点不同，就是第一个参数永远是实例变量
+# self，并且，调用时，不用传递该参数。
+class Student(object):
+
+    def __init__(self,name,score):
+        self.name = name;
+        self.score = score
+    def print_score(self):
+        print '%s:%s' % (self.name,self.score)
+    def get_grade(self):
+        if self.score>=90:
+            return 'A'
+        elif self.score>=60:
+            return 'B'
+        else:
+            return  'C'
+
+
+bart=Student('',59)
+lisa=Student('Lisa Simpson',87)
+print 'nihao',bart
+print Student
+bart.name = 'Bart Simpson'
+print bart.name
+bart.print_score()
+lisa.print_score()
+print bart.get_grade()
 
