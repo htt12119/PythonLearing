@@ -80,3 +80,38 @@ def readImage(fp):
     return  None
 
 #pass就是什么也不做，只是为了防止语法错误
+
+#-*- coding:utf-8 -*-
+class Student(object):
+    pass
+
+
+s = Student()
+s.name = 'Michael'
+print 's.name = ',s.name
+
+#还可以尝试给实例绑定一个方法：
+def set_age(self,age):
+    self.age = age
+from types import MethodType
+s.set_age=MethodType(set_age,s,Student)
+#调用实例方法，直接输出这行是None
+s.set_age(25)
+#测试
+print s.age
+
+s2=Student()
+#给一个实例绑定的方法，对另一个实例是不起作用的
+# s2.set_age(25)
+
+#为了给所有实例都绑定方法，可以给class绑定方法：
+def set_score(self,score):
+    self.score=score
+Student.set_score=MethodType(set_score,None,Student)
+s.set_score(100)
+print 's.score=',s.score
+s2.set_score(99)
+print 's2.score=',s2.score
+#以上为动态绑定
+
+#现在为用slot修改能够更改额属性
