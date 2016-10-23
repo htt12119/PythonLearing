@@ -45,5 +45,38 @@ class Tortoise(Animal):
 
 run_twice(Tortoise())
 
+#获取对象信息
+#-*- coding:utf-8 -*-
+class MyObject(object):
+    def __init__(self):
+        self.x=9
+    def power(self):
+        return self.x*self.x
+obj = MyObject()
+#有属性'x'吗?
+print 'hasattr x:',hasattr(obj,'x')
+print 'obj.x:',obj.x
+print 'hasattr y:',hasattr(obj,'y')
+#设置一个属性'y'
+setattr(obj,'y',19)
+print '（设置属性y之后）hasattr y:',hasattr(obj,'y')
+print '获取属性y:',getattr(obj,'y')
+print '用“.”获取属性y:',obj.y
+#试图获取不存在的属性会抛出AttributeError错误
+#print '获取属性z:',getattr(obj,'z')
+#可以传入一个默认值，如果属性不存在就返回默认值
+print '获取属性z:',getattr(obj,'z',404)
+print 'hasattr power:',hasattr(obj,'power')
+print '获取属性“power”:',getattr(obj,'power')
+fn=getattr(obj,'power')
+print fn
+#调用fn()与调用obj.power()是一样的
+print fn()
+
+#一个正确的用法的例子：
+def readImage(fp):
+    if hasattr(fp,'read'):
+        return readData(fp)
+    return  None
 
 
