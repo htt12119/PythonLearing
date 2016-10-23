@@ -79,4 +79,4 @@ def readImage(fp):
         return readData(fp)
     return  None
 
-
+#pass就是什么也不做，只是为了防止语法错误
