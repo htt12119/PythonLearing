@@ -114,4 +114,22 @@ s2.set_score(99)
 print 's2.score=',s2.score
 #以上为动态绑定
 
-#现在为用slot修改能够更改额属性
+#现在为用__slots__限定能够更改的属性
+#-*- coding:utf-8 -*-
+
+class Student(object):
+    # 用tuple定义允许绑定的属性名称
+    __slots__ = ('name', 'age')
+
+s=Student()
+s.name = 'Michael'
+s.age = 25
+#试图绑定没有的属性score出现错误
+# s.score = 99
+#__slots__定义的属性仅对当前类起作用，对子类没有作用
+class GraduateStudent(Student):
+    pass
+g = GraduateStudent()
+g.score=9999
+print g.score
+
