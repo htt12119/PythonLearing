@@ -144,3 +144,18 @@ print callable(max)
 print callable([1,2,3])
 print callable(None)
 print callable('string')
+
+#-*- coding:utf-8 -*-
+class ListMetaclass(type):
+    def __new__(cls, name, bases, attrs):
+        attrs['add'] = lambda self, value: self.append(value)
+        return type.__new__(cls, name, bases, attrs)
+
+
+class MyList(list):
+    __metaclass__ = ListMetaclass
+L=MyList()
+L.add(1)
+print L
+l = list()
+# l.add(1)
