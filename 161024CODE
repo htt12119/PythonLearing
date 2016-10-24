@@ -41,3 +41,19 @@ for n in Fib():
 #这个不明白怎么回事，说不能当list用
 print 'hello',Fib()[5]
 
+#哼哼哼哼哼分界线
+class Fib(object):
+    def __getitem__(self, n):
+        a,b = 1,1
+        for x in range(n):
+            a,b = b,a + b
+        return a
+f=Fib()
+print f[0]
+print f[1]
+print f[2]
+print f[3]
+print f[10]
+print f[100]
+
+print range(100)[5:10]
