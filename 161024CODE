@@ -57,3 +57,28 @@ print f[10]
 print f[100]
 
 print range(100)[5:10]
+
+#-*- coding:utf-8 -*-
+#改变原来的Fib类不能用切片的情况
+class Fib(object):
+    def __getitem__(self,n):
+        if isinstance(n,int):
+            a,b = 1,1
+            for x in range(n):
+                a,b=b,a+b
+            return a
+        if  isinstance(n,slice):
+            start = n.start
+            stop = n.stop
+            a,b = 1,1
+            L = []
+            for x in range(stop):
+                if x>= start:
+                    L.append(a)
+                a,b = b,a+b
+            return  L
+f = Fib()
+print 'f[0:5]:',f[0:5]
+print 'f[:10]:',f[:10]
+#但是没有对step参数做处理
+print 'f[:10:2]:',f[:10:2]
