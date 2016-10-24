@@ -97,3 +97,4 @@ print s.name
 print s.score
 print s.age()
 #只有没有找到属性的情况下，才调用__getattr__
+print s.abc
