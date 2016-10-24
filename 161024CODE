@@ -82,3 +82,18 @@ print 'f[0:5]:',f[0:5]
 print 'f[:10]:',f[:10]
 #但是没有对step参数做处理
 print 'f[:10:2]:',f[:10:2]
+#-*- coding:utf-8 -*-
+class Student(object):
+    def __init__(self):
+        self.name = 'Michael'
+    def __getattr__(self, attr):
+        if attr =='score':
+            return 99
+        if attr=='age':
+            return lambda :25
+
+s = Student()
+print s.name
+print s.score
+print s.age()
+#只有没有找到属性的情况下，才调用__getattr__
