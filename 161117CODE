@@ -1,0 +1,7 @@
+#coding:utf-8
+import os
+print os.name
+# print os.uname() #uname在windows上不提供
+
+import shutil
+[x for x in os.listdir(',') if os.path.isdir(x)]
