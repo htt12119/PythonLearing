@@ -5,3 +5,16 @@ print os.name
 
 import shutil
 [x for x in os.listdir(',') if os.path.isdir(x)]
+
+#
+#coding:utf-8
+import os
+def search(dir,w):
+    for x in os.listdir(dir):
+        nf=os.path.join(dir,x)
+        if os.path.isfile(nf) and w in nf:
+            print nf
+        elif os.path.isdir(nf):
+            search(nf,w)
+
+search('.','test')
