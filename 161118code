@@ -8,3 +8,20 @@ if pid==0:
 else:
     print 'I (%s) just created a child process(%s).' % (os.getpid(),pid)
 #以上又不能在windows下使用
+
+#coding:utf-8
+from multiprocessing import  Process
+import os
+
+#子进程要执行的代码
+def run_proc(name):
+    print 'Run child process %s (%s)...' % (name,os.getpid())
+
+if __name__=='__main__':
+    print 'Parent process %s.' % os.getpid()
+    p = Process(target=run_proc,args=('test',))
+    print 'Process will start.'
+    p.start()
+    p.join()
+    print 'Process end.'
+
